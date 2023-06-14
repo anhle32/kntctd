@@ -41,7 +41,7 @@ confusion_matrix = pd.crosstab(y_test, yhat_test, rownames=['Actual'], colnames=
 
 
 
-menu = ["Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
+menu = ["gioi thieu ve chi nhanh","Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
 choice = st.sidebar.selectbox('Danh mục tính năng', menu)
 
 if choice == 'Mục tiêu của mô hình':    
@@ -53,12 +53,17 @@ if choice == 'Mục tiêu của mô hình':
     st.image("ham_spam.jpg")
     st.image("LogReg_1.png")
     st.image("motabien.png")
-
+    
+elif choice == 'gioi thieu ve chi nhanh':
+    st.subheader("Agribank chi nhanh 3")
+    st.write("##### Ngân hàng Nông nghiệp và Phát triển nông thôn Việt Nam (Agribank) - Chi nhánh 3 vừa tổ chức Lễ ký kết thỏa thuận hợp tác toàn diện với Esuhai Group. Theo đó, hai bên sẽ phối hợp triển khai chương trình Tài trợ tín dụng để học viên Esuhai Group đóng học phí và phí dịch vụ với lãi suất ưu đãi nhằm giúp người lao động giải quyết những khó khăn khi ra nước ngoài làm việc")
+    st.image("agri.jpg")
+    
 elif choice == 'Xây dựng mô hình':
     st.subheader("Xây dựng mô hình")
     st.write("##### 1. Hiển thị dữ liệu")
-    st.dataframe(df.head(3))
-    st.dataframe(df.tail(3))  
+    st.dataframe(df.head(10))
+    st.dataframe(df.tail(10))  
     
     st.write("##### 2. Trực quan hóa dữ liệu")
     u=st.text_input('Nhập biến muốn vẽ vào đây')
